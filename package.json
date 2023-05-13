@@ -1,0 +1,19 @@
+{
+  "name": "website-learner-assignment",
+  "version": "1.0.0",
+  "description": "website learner assignment",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "author": "Dipanshu pandagre",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.5.0",
+    "mongoose": "^7.1.1",
+    "nodemon": "^2.0.22"
+  }
+}
