@@ -4,12 +4,13 @@ const route = require('./routes/route.js')
 const  mongoose  = require('mongoose')
 const app = express()
 
-
+require('dotenv').config();
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 
-mongoose.connect("mongodb+srv://dipanshu:CFu9vt7ZRdH1P2XR@cluster0.c9qpfj3.mongodb.net/website-learner", {
+mongoose.set({ strictQuery: true });
+mongoose.connect(process.env.MongoDB_URI, {
         useNewUrlParser: true,useUnifiedTopology:true
     })
     .then(() => console.log("MongoDb is connected"))
